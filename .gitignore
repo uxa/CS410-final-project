@@ -1,4 +1,4 @@
 *.csv
 *.zip
-*.pickle
+#*.pickle
 .ipynb_checkpoints/
