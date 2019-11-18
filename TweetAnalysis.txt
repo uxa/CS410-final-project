@@ -1,0 +1,166 @@
+Tweet: RT @EgSophie: For reference: this is Jovi Val, on the left posing in front of a swastika and giving the Nazi salute, and on the right in hi…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: A year long physical 🤔  maybe plastic surgery 😅😂🤣 President Trump began phase one of his annual physical at Walter… https://t.co/HKpuHODmLV
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 60.0%
+Tweet: RT @michellemalkin: The EB-5 racket is a ghastly selling out of US citizenship to the highest foreign bidders. John Miano &amp; I exposed the s…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+Tweet: RT @ThePlumLineGS: Important exchange here: https://t.co/WxhLeO2AWx
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @maggie_pdx: @brianklaas Every day I wonder what other 'favors' Trump has attempted collection on in service of his 2020 reelection.
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @PressSec: Very well said! If the dems had the votes they wouldn’t be prolonging this charade. They’re just working with their partners…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: it's easier to understand American politics once you realize donald trump is the first wife or husband you divorced… https://t.co/Kr7JEFBCCj
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+Tweet: RT @FPWellman: Every one of his men testified against him. He’s not a hero. He’s not misunderstood. He wasn’t worn down by combat after onl…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @RyanAFournier: BOMBSHELL: Democrat Rep. Xochiti Torres Small accepted thousands of dollars in campaign contributions from Adam Schiff,…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @EvanMcMullin: What could be a clearer example of Trump’s “America First” scam than his turning over key U.S. military bases to Russian…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @sfpelosi: 👉🏽 THIS is how to respond to Republican talking points dished out by the media trying to #bothsides Trump’s wrongdoing and lu…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+Tweet: @realDonaldTrump Shut up Trump GROW UP, LOCK HIM UP
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: @JackieDeArmond @realDonaldTrump Democrats are just deeply disturbed individuals. They cannot be trusted to ever do… https://t.co/ufsRdFkC4U
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: RT @Hillaryh4444Hos: Trump’s betrayal of the Kurds is sickening to U.S. soldiers - The Washington Post https://t.co/WovRx6LaFa
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @Martamendoza718: Russian ambassador says he won't name all the Trump officials he's met with because 'the list is so long' https://t.co…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @Will_Bunch: OK, everybody -- the game is over and you all want a good read to a) take your mind off what just happened and b) good read…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @atrupar: Let's be clear about what's actually going on here -- Trump is redistributing American taxpayer funds to farmers to buy them o…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: @KUSINews should investigate this.
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: He had to be surgically removed from tRump's anus.
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Negative with a probability of 75.0%
+Tweet: RT @stuartpstevens: The irony is that it is only a matter of time until most who now attack “never Trumpers” will be claiming they were one…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: THIS
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @MarshallCohen: More: Didn't condemn Russian attack on Ukraine vessel. Trump transition undermined Obama sanctions on Russia. Trump camp…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @Angelheart29672: @FranCifelli 🥰🇺🇸 Donald J Trump best president of our lifetime🥰🇺🇸 https://t.co/RBOddKbe6U
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @nancylee2016: "House Ethics Committee announced it’s investigating Jihad-Rep. Rashida Tlaib"
+
+We all have to live within our means. Is…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @IlhanMN: Donald Trump has gotten away with every single one of his corrupt deeds so far.
+
+Now, for the first time in his life, he will…
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 65.0%
+Tweet: RT @neeratanden: Let’s do this to every single GOP House member who puts their party over country.  This is quite the incentive structure w…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @gtconway3d: He’s simply incapable of speaking coherently. https://t.co/6EkhSjYAWd
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @RadioFreeTom: Must be exhausting for him to keep up this breakneck pace https://t.co/g4vt2kkVT9
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: @DeadPoo1_Merc @Nolrog @StephenKing It's there, Sondland and Volker told the Ukrainians it was required and even di… https://t.co/UkNREztGFQ
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: Hospital Officials Say Trump’s Visit To Walter Reed Was Abnormal - https://t.co/fYCwBjKM0s
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: RT @KatiePhang: Jennifer Williams works as a Special Advisor to VP Mike Pence. 
+
+Trump is a moron. https://t.co/Y0GTcv8rUX
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+Tweet: RT @RodericDay: This Bolivian man emphasizes that when cityfolk protested to demand the resignation of Evo, they were allowed to do so for…
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 60.0%
