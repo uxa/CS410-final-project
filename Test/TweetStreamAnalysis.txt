@@ -1,0 +1,90 @@
+Tweet: RT @dbrand: This is not a joke.
+
+https://t.co/b2LXy9HZ5N https://t.co/5q4wcLJwXU
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+Tweet: RT @arthurkflam: Nikola Tesla in the first photo ever taken by phosphorescent light 1894 https://t.co/oqMXpPNYrp
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: Counting Tesla’s brings me peace and jOY
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+Tweet: RT @elonmusk: Franz throws steel ball at Cybertruck window right before launch. Guess we have some improvements to make before production h…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: After the launch of this giant, Cybertruck got more than 200,000 orders without spending a single $ on advertisment… https://t.co/KgKUbz1OoI
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: Tesla : Les essuie-glaces du futur seront-ils des lasers ? https://t.co/afbT8fS7He
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+Tweet: RT @elonmusk: Cybertruck pulls F-150 uphill https://t.co/OfaqUkrDI3
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @elonmusk: Cybertruck pulls F-150 uphill https://t.co/OfaqUkrDI3
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @keeganaugustus: ima tell my kids that phineas flynn was elon musk https://t.co/RIrF4Y6Gap
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+Tweet: RT @khaleejtimes: Will @DubaiPoliceHQ add a @Tesla #Cybertruck to their fleet?
+https://t.co/LnW6u19usj
+
+@elonmusk @mostaqbal_ae #TeslaPicku…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+Tweet: RT @guillotineluvr: Elon musk is literally fucking up our ability to see the sky but please tell me more about how Indigenous Hawaiian prot…
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: I caught a charge in my car no tesla
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 60.0%
+Tweet: Tesla pill got me flyin' like a cockpit .... okay The Weeknd okaaaay
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Tweet: RT @cohkohhh: OMG...@safelite for the win! 🤣 https://t.co/ubDGlcbhYF
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+Tweet: RT @guillotineluvr: Elon musk is literally fucking up our ability to see the sky but please tell me more about how Indigenous Hawaiian prot…
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: RT @guillotineluvr: Elon musk is literally fucking up our ability to see the sky but please tell me more about how Indigenous Hawaiian prot…
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 100.0%
+Tweet: RT @WoT_Japan: 無敵💥#WoT #TeslaCyberTruck #サイバートラック @elonmusk @teslamotorsjp @Tesla https://t.co/MMPHuEODHB
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%

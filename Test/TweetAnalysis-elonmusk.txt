@@ -1,0 +1,100 @@
+250k
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+@Nnedi @Tesla We’d be happy to help
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+@kimpaquette @neiltyson Sure, will aim to do this next week
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+@neiltyson Agreed, this will be exciting to see!
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+@neiltyson Electric motors also have insane torque. If we load both trucks to the max, electric still wins. Physics… https://t.co/T40BB2Xv9f
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Negative with a probability of 75.0%
+Bring it on https://t.co/pCnln1NdRO
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+@Halo @pewdiepie Cybertruck is inspired by games like Halo. Warthog irl!!
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+200k
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+@RodAdib1 Yup. Sledgehammer impact on door cracked base of glass, which is why steel ball didn’t bounce off. Should… https://t.co/jln7n90UfO
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+Cybertruck pulls F-150 uphill https://t.co/OfaqUkrDI3
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 60.0%
+@greenspank Higher hardness, higher strength &amp; doesn’t cost crazy money for ~3mm skins
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 65.0%
+@TeslaOwnersofMA @Sofiaan @Tesla In general, this is something Tesla should do
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+@Sofiaan @Tesla We should def make it good to hang out there
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 65.0%
+RT @NASA: Each second, 1.5 million tons of solar material shoot off the Sun into space. The magnetosphere shields Earth, but the solar wind…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+Cybertruck is our last product unveil for a while, but there will be some (mostly) unexpected technology announcements next year
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+@thomasbroadfoot Good question. It’s a new variant of 300 series stainless steel, but it also gets cold-worked many… https://t.co/DLB7ukOEWc
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Negative with a probability of 75.0%
+@JohnnaCrider1 @EV_Stevee @PicklePunchD Can be wrapped in any color!
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+@EV_Stevee @PicklePunchD The body panels will actually be laser cut!
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 65.0%
+@S_Padival @annerajb @flcnhvy Long term, it probably makes sense to build a smaller Cybertruck too
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+@vistacruiser7 @RenataKonkoly Interesting idea
+LogisticRegression: Negative
+NaiveBayes: Negative
+NeuralNetwork: Positive
+Prediction: Negative with a probability of 75.0%

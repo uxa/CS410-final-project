@@ -27,12 +27,14 @@ import argparse
 import pickle
 import os
 import time
+from collections import Counter
 
 from tweepy import OAuthHandler
 from tweepy import StreamListener
 import tweepy
 from nltk.corpus import stopwords # nltk.download('stopwords') before importing
 from nltk.stem import PorterStemmer
+import matplotlib.pyplot as plt
 
 ### Pickled models
 base_pickle_dir = 'Pickled data' # This directory contains the pickled models
@@ -110,19 +112,19 @@ class Twitter:
         Initializes a Twitter object with authentication.
         '''
 
-        # keys and tokens from the Twitter Dev Console 
+        # Keys and tokens from the Twitter Dev Console 
         consumer_key = 'gLRNOAhuVMPDvtr5aOvYqZ6Ze'
         consumer_secret = '6n9F6Ieedd97SrtvZFiRvf5k5uognXDEYTUabsnIidKHH3PaDA'
         access_token = '919706112261312512-fP82zHMs27OeeIsVtVXpNrVEt2CBSBH'
         access_token_secret = 'zPUl78nX5hNONyBy6ei943TTKgonzN0JXhLfteYVQ5YKS'
   
-        # attempt authentication 
+        # Attempt authentication 
         try: 
-            # create OAuthHandler object 
+            # Create OAuthHandler object 
             self.auth = OAuthHandler(consumer_key, consumer_secret) 
-            # set access token and secret 
+            # Set access token and secret 
             self.auth.set_access_token(access_token, access_token_secret) 
-            # create tweepy API object to fetch tweets 
+            # Create tweepy API object to fetch tweets 
             self.api = tweepy.API(self.auth) 
         except: 
             logging.fatal("Error: Authentication Failed")
@@ -151,7 +153,7 @@ class Twitter:
         except tweepy.TweepError as e:
             logging.exception('Failed to fetch tweets: {}'.format(str))
 
-    def search_tweets(self, query, count = 1):
+    def search_tweets(self, query, count = 10):
         '''
         Search for tweets matching a query.
         #NOTE: This does not perform an exhaustive search.
@@ -221,14 +223,64 @@ class Classifier:
         result += 'Prediction: {} with a probability of {}%\n'.format(final_score[0], final_score[-1]*100)
         return result
 
+    def visualize(self, results, title = None, save_to_file = False):
+        '''
+        Provides a pie chart to summarize the predicted sentiments
+        '''
+
+        final_scores_combined = Counter([self.weighted_average(result)[0] for result in results])
+
+        labels = final_scores_combined.keys()
+        sizes = final_scores_combined.values()
+        colors = ['lightcoral' if l == 'Negative' else 'yellowgreen' for l in labels]
+        explode = (0.1, 0)
+
+        plt.pie(sizes, labels = labels, explode = explode, colors = colors, shadow = True, autopct = '%1.1f%%')
+        plt.axis('equal')
+
+        if title:
+            plt.title(title)
+
+        if save_to_file:
+            plt.savefig('TweetSummaryPlot.png')
+            logging.info('Plot saved as TweetSummaryPlot.png')
+        else:
+            plt.show()
+
+    def process_data(self, data, user = None, save_to_file = False, visualize = False):
+        '''
+        Saves tweets to file and optionally provides a visual summary of predictions.
+        '''
+
+        predictions, results = list(), list()
+
+        for tweet in data:
+            print('Tweet: {}'.format(tweet))
+            prediction = self.predict(tweet, generate_summary = False)
+            result = self.get_summary(prediction)
+            predictions.append(prediction)
+            results.append(result)
+            print(result)
+        
+        if save_to_file:
+            with open('TweetAnalysis-{}.txt'.format(user), 'w') as file:
+                for tweet, result in zip(data, results):
+                    file.write(tweet + '\n')
+                    file.write(result)
+            logging.info('File saved as TweetAnalysis-{}.txt'.format(user))
+
+        if visualize:
+            self.visualize(predictions, title = user, save_to_file = save_to_file)
+
 
 class TwitterStreamListener(tweepy.StreamListener):
     '''
     Creates a Twitter stream object.
     '''
 
-    def __init__(self, classifier = None, save_to_file = False, time_limit = 20):
+    def __init__(self, topic = None, classifier = None, save_to_file = False, time_limit = 20, visualize = False):
 
+        self.predictions = list()
         self.limit = time_limit
         self.start = time.time()
 
@@ -238,8 +290,11 @@ class TwitterStreamListener(tweepy.StreamListener):
             self.model = classifier
 
         self.save_to_file = save_to_file
-        if save_to_file:
-            self.open_file = open('TweetAnalysis.txt', 'w')
+        self.visualize = visualize
+        self.topic = topic
+
+        if self.save_to_file:
+            self.open_file = open('TweetStreamAnalysis.txt', 'w')
 
         super(TwitterStreamListener, self).__init__()
 
@@ -249,20 +304,28 @@ class TwitterStreamListener(tweepy.StreamListener):
         '''
 
         if (time.time() - self.start) < self.limit:
-            prediction = self.model.predict(str(data.text))
+
+            prediction = self.model.predict(str(data.text), generate_summary = False)
+            summary = self.model.get_summary(prediction)
+            self.predictions.append(prediction)
 
             print('Tweet: {}'.format(data.text))
-            print(prediction)
+            print(summary)
 
             if self.save_to_file:
                 self.open_file.write('Tweet: {}\n'.format(data.text))
-                self.open_file.write(prediction)
+                self.open_file.write(summary)
 
             time.sleep(0.25) # This sleep ensures that the stdout is not flooded with tweets.
             return True
         else:
             if self.save_to_file:
                 self.open_file.close()
+                logging.info('File saved as TweetStreamAnalysis.txt')
+
+            if self.visualize:
+                self.model.visualize(self.predictions, title = self.topic, save_to_file = self.save_to_file)
+
             return False
     
     def on_error(self, status):
@@ -280,6 +343,7 @@ if __name__ == '__main__':
     group.add_argument('--user', '-u', type=str, default=None, help='Twitter username to fetch tweets')
     group.add_argument('--stream', nargs='+', type=str, default=None, help='Stream a list of topics from Twitter')
     parser.add_argument('--file', action='store_true', default=False, help='Store tweets and analysis from stream to file')
+    parser.add_argument('--visualize', action='store_true', default=False, help='Provides a pie chart with a summary of predictions')
     parser.add_argument('--count', '-c', type=lambda x : 200 if int(x) > 200 else abs(int(x)), default=10, help='Number of tweets to fetch')
     parser.add_argument('--time', type=int, default=20, help='Time to stream a topic')
 
@@ -292,15 +356,13 @@ if __name__ == '__main__':
 
         # Initialize classifier
         model = Classifier()
-        for tweet in tweets:
-            print('Tweet: {}'.format(tweet))
-            print(model.predict(tweet))
+        model.process_data(data = tweets, user = args.user, save_to_file = args.file, visualize = args.visualize)
 
     if args.stream:
         tw_connection = Twitter()
 
         # Initialize stream object
-        streamListener = TwitterStreamListener(save_to_file = args.file, time_limit = args.time)
+        streamListener = TwitterStreamListener(topic = args.stream, save_to_file = args.file, time_limit = args.time, visualize = args.visualize)
         stream = tweepy.Stream(auth = tw_connection.api.auth, listener = streamListener)
         stream.filter(track = args.stream)
 

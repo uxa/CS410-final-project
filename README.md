@@ -37,10 +37,13 @@ The final prediction is decided based on the scores by the 3 individual models. 
 
 - `app.py` - Main application file that interacts with the tweets and the models
 - `TrainModel.ipynb` - This notebook contains the pre-processing and model training
-- `Test/Test.ipynb` - Notebook containing test code to unpack and load the model for predictions
-- `Test/twitter_analysis.py` - Initial tests using the Twitter API and the trained models
-- `Test/twitter_api.py` - Initial tests setting up the Twitter API
-- Pickled data directory
+- `Test/` directory
+    - `Test.ipynb` - Notebook containing test code to unpack and load the model for predictions
+    - `twitter_analysis.py` - Initial tests using the Twitter API and the trained models
+    - `twitter_api.py` - Initial tests setting up the Twitter API
+    - `TweetStreamAnalysis.txt` - Test file containing tweets saved after running a stream
+    - `TweetSummaryPlot.png` - Test pie chart generated from the stream predictions
+- `Pickled data/` directory
     - `LR.pickle` - Pickled trained Logistic regression model
     - `naive-bayes.pickle` - Pickled trained Naive Bayes model
     - `nn.pickle` - Pickled trained Neural Network model
@@ -55,7 +58,8 @@ The final prediction is decided based on the scores by the 3 individual models. 
     - Stream tweets for a list of topics
         - `--stream` - list of topics to fetch live tweets from Twitter and perform analysis (example - "trump" "Tesla" "Penguins")
         - `--time` - total duration of the stream in seconds (example - 10, defaults to 20)
-        - `--file` - save the tweets and performed analysis to a file named `TweetAnalysis.txt` in the current workspace
+        - `--file` - save the tweets and performed analysis to a file named `TweetStreamAnalysis.txt` in the current workspace
+        - `--visualize` - visualizes the predictions using a pie chart. Saves to file when `--file` flag is used
 
 ### Examples
 
@@ -126,3 +130,33 @@ NaiveBayes: Negative
 NeuralNetwork: Positive
 Prediction: Positive with a probability of 65.0%
 ```
+
+#### Streaming topics and visualizing the results
+```
+❯ python app.py --stream "tesla" "elon musk" "cybertruck" --time 15 --visualize                                                                                                                                                                             ─╯
+Tweet: AHAHAHAHAHAHAHAHA but real talk, the #cybertruck is my favorite new car to be released since probably the ND miata.
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Negative
+Prediction: Positive with a probability of 75.0%
+
+Tweet: Metro Boomin turn this hoe into a mosh pit, Tesla build got my flying like a cockpit
+LogisticRegression: Negative
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 60.0%
+
+Tweet: RT @jfagone: His company SpaceX could have minimized the interference by simply painting the satellites black. But they didn’t do that. htt…
+LogisticRegression: Positive
+NaiveBayes: Negative
+NeuralNetwork: Negative
+Prediction: Negative with a probability of 60.0%
+
+Tweet: RT @CNN: A Ford executive, reacting to a video of Tesla's all-electric Cybertruck winning a tug-of-war against a Ford F-150, challenged Tes…
+LogisticRegression: Positive
+NaiveBayes: Positive
+NeuralNetwork: Positive
+Prediction: Positive with a probability of 100.0%
+```
+
+![Pie chart](https://i.imgur.com/PV7xaDK.png)
