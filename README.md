@@ -5,7 +5,60 @@
 ### Introduction
 
 The aim of this project is to design a system that can provide live sentiment analysis on a stream of tweets from Twitter. This is achieved by training 3 models on a dataset with 1.6 million tweets.
-The final prediction is decided based on the scores by the 3 individual models. Models with higher accuracy are given a higher weight for the final prediction. 
+
+The CSV file containing the tweets can be downloaded from - https://www.kaggle.com/kazanova/sentiment140/download
+
+To be able to retain the original state of the trained model and to provide predictions quickly, the trained models and vectors are saved to a binary file using Pickle. These models and vectors are loaded into memory when the application is executed. Live tweets are streamed from Twitter and passed to the models to predict the sentiment. The application supports several arguments which are discussed below.
+
+The final prediction is decided based on the individual scores by the 3 models. Models with higher accuracy are given a higher weight for the final prediction probability.
+
+### Tools used in this project
+
+- `Python 3.7`
+- `Jupyter` - notebooks used to train and test the models
+- `Pickle` - used to save the trained models and vectors as binary files
+- `Pandas, NumPy` - load and manipulate data using DataFrames
+- `NLTK` - used in data pre-processing and cleaning
+- `Scikit-learn` - machine learning algorithm toolkit
+- `Tweepy` - Twitter API to stream live tweets
+- `Matplotlib` - tool to visualize the results
+
+### Set up the enviornment to use this application
+
+#### Method 1 (pip)
+
+Please ensure you have Python 3 installed
+
+The following command can be run to install all the dependencies (using `pip`) needed for this app to run.
+
+`pip install --upgrade jupyter pandas numpy nltk scikit-learn tweepy matplotlib`
+
+#### Method 2 (Conda environment)
+
+If you have [Anaconda](https://www.anaconda.com/distribution/) installed, the dependencies can be installed to a custom enviornment (ideal if you have other projects using different versions of the libraries)
+
+Create the environment:  `conda create -n TeamWolfram python=3.7`
+
+Activate the environment:  `conda activate TeamWolfram`
+
+From this project workspace execute: `pip install --requirement requirements.txt`
+
+### Files in this workspace
+
+- `app.py` - Main application file that interacts with the tweets and the models
+- `TrainModel.ipynb` - This notebook contains the pre-processing and model training
+- `requirements.txt` - File containing the Python requirements for this project
+- `Test/` directory (Misc: tests performed while testing and tweaking the application)
+    - `Test.ipynb` - Notebook containing test code to unpack and load the model for predictions
+    - `twitter_analysis.py` - Initial tests using the Twitter API and the trained models
+    - `twitter_api.py` - Initial tests setting up the Twitter API
+    - `TweetStreamAnalysis.txt` - Test file containing tweets saved after running a stream
+    - `TweetSummaryPlot.png` - Test pie chart generated from the stream predictions
+- `Pickled data/` directory
+    - `LR.pickle` - Pickled trained Logistic regression model
+    - `naive-bayes.pickle` - Pickled trained Naive Bayes model
+    - `nn.pickle` - Pickled trained Neural Network model
+    - `vector.pickle` - Pickled TF-IDF vector to transform the data
 
 ### Models and achieved accuracy
 
@@ -33,23 +86,7 @@ The final prediction is decided based on the scores by the 3 individual models. 
 - `Model packaging`: Pickle
 - `Twitter API`: Tweepy
 
-### Files in this workspace
-
-- `app.py` - Main application file that interacts with the tweets and the models
-- `TrainModel.ipynb` - This notebook contains the pre-processing and model training
-- `Test/` directory
-    - `Test.ipynb` - Notebook containing test code to unpack and load the model for predictions
-    - `twitter_analysis.py` - Initial tests using the Twitter API and the trained models
-    - `twitter_api.py` - Initial tests setting up the Twitter API
-    - `TweetStreamAnalysis.txt` - Test file containing tweets saved after running a stream
-    - `TweetSummaryPlot.png` - Test pie chart generated from the stream predictions
-- `Pickled data/` directory
-    - `LR.pickle` - Pickled trained Logistic regression model
-    - `naive-bayes.pickle` - Pickled trained Naive Bayes model
-    - `nn.pickle` - Pickled trained Neural Network model
-    - `vector.pickle` - Pickled TF-IDF vector to transform the data
-
-### Hot to use the app
+### How to use the app
 
 - `app.py` is a command line app that supports the following arguments
     - Tweets from a specific user
@@ -60,6 +97,8 @@ The final prediction is decided based on the scores by the 3 individual models. 
         - `--time` - total duration of the stream in seconds (example - 10, defaults to 20)
         - `--file` - save the tweets and performed analysis to a file named `TweetStreamAnalysis.txt` in the current workspace
         - `--visualize` - visualizes the predictions using a pie chart. Saves to file when `--file` flag is used
+
+*Please Note: This app provides default API access keys to use this application for testing purposes. It is however, recommended to change these to values in `app.py` for extensive usage. Instructions to generate new keys can be found [here](https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens) if you would like to change these keys.*
 
 ### Examples
 
