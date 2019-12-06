@@ -43,6 +43,10 @@ Activate the environment:  `conda activate TeamWolfram`
 
 From this project workspace execute: `pip install --requirement requirements.txt`
 
+#### Download stopwords package
+
+From the terminal, run:  `python -c "import nltk; nltk.download('stopwords')"`
+
 ### Files in this workspace
 
 - `app.py` - Main application file that interacts with the tweets and the models
